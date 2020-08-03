@@ -4,7 +4,7 @@ $(function() {
 	echart_3();
 	echart_map();
 
-	//echart_1湖南货物收入
+	//echart_1年龄分布
 	function echart_1() {
 		// 基于准备好的dom，初始化echarts实例
 		var myChart = echarts.init(document.getElementById('chart_1'));
@@ -16,7 +16,7 @@ $(function() {
 			legend: {
 				x: 'center',
 				y: '15%',
-				data: ['南宁市', '柳州市', '桂林市', '梧州市', '北海市', '防城港市', '钦州市', '贵港市', '玉林市', '百色市', '贺州市', '河池市', '来宾市', '崇左市'],
+				data: ['60-69岁','70-79岁','80-89岁','90岁以上'],
 				icon: 'circle',
 				textStyle: {
 					color: '#fff',
@@ -41,7 +41,7 @@ $(function() {
 				label: {
 					normal: {
 						show: true,
-						formatter: '{b}{c}万件'
+						formatter: '{c}'
 					},
 					emphasis: {
 						show: true
@@ -57,342 +57,41 @@ $(function() {
 					}
 				},
 				data: [{
-						value: 25097.63,
-						name: '南宁市',
+						value: 1172324,
+						name: '60-69岁',
 						itemStyle: {
 							normal: {
-								color: '#f845f1'
+								color: '#FF4949'
 							}
 						}
 					},
 					{
-						value: 4740.16,
-						name: '柳州市',
+						value: 739348,
+						name: '70-79岁',
 						itemStyle: {
 							normal: {
-								color: '#ad46f3'
+								color: '#FFA74D'
 							}
 						}
 					},
 					{
-						value: 2931.79,
-						name: '桂林市',
+						value: 279315,
+						name: '80-89岁',
 						itemStyle: {
 							normal: {
-								color: '#5045f6'
+								color: '#4BF0FF'
 							}
 						}
 					},
 					{
-						value: 1174.27,
-						name: '梧州市',
+						value: 91745,
+						name: '90岁以上',
 						itemStyle: {
 							normal: {
-								color: '#4777f5'
+								color: '#4E82FF'
 							}
 						}
-					},
-					{
-						value: 1423.21,
-						name: '北海市',
-						itemStyle: {
-							normal: {
-								color: '#44aff0'
-							}
-						}
-					},
-					{
-						value: 1132.37,
-						name: '防城港市',
-						itemStyle: {
-							normal: {
-								color: '#45dbf7'
-							}
-						}
-					},
-					{
-						value: 929.50,
-						name: '钦州市',
-						itemStyle: {
-							normal: {
-								color: '#f6d54a'
-							}
-						}
-					},
-					{
-						value: 1555.20,
-						name: '贵港市',
-						itemStyle: {
-							normal: {
-								color: '#f69846'
-							}
-						}
-					},
-					{
-						value: 4881.52,
-						name: '玉林市',
-						itemStyle: {
-							normal: {
-								color: '#ad46f3'
-							}
-						}
-					},
-					{
-						value: 1114.72,
-						name: '百色市',
-						itemStyle: {
-							normal: {
-								color: '#32C12E'
-							}
-						}
-					},
-					{
-						value: 605.85,
-						name: '贺州市',
-						itemStyle: {
-							normal: {
-								color: '#90F5AA'
-							}
-						}
-					},
-					{
-						value: 596.23,
-						name: '河池市',
-						itemStyle: {
-							normal: {
-								color: '#F46852'
-							}
-						}
-					},
-					{
-						value: 419.44,
-						name: '来宾市',
-						itemStyle: {
-							normal: {
-								color: '#eaf048'
-							}
-						}
-					},
-					{
-						value: 1499.18,
-						name: '崇左市',
-						itemStyle: {
-							normal: {
-								color: '#9ff048'
-							}
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					},
-					{
-						value: 0,
-						name: "",
-						itemStyle: {
-							normal: {
-								color: 'transparent'
-							}
-						},
-						label: {
-							show: false
-						},
-						labelLine: {
-							show: false
-						}
-					}
-				]
+					}]
 			}]
 		};
 		// 使用刚指定的配置项和数据显示图表。
