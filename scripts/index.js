@@ -16,7 +16,7 @@ $(function() {
 			legend: {
 				x: 'center',
 				y: '15%',
-				data: ['60-69岁','70-79岁','80-89岁','90岁以上'],
+				data: ['60-69岁', '70-79岁', '80-89岁', '90岁以上'],
 				icon: 'circle',
 				textStyle: {
 					color: '#fff',
@@ -91,7 +91,8 @@ $(function() {
 								color: '#4E82FF'
 							}
 						}
-					}]
+					}
+				]
 			}]
 		};
 		// 使用刚指定的配置项和数据显示图表。
@@ -101,40 +102,18 @@ $(function() {
 		});
 	}
 
-	//电子商务销售额、订单数
+	//左二图标 柱状图
 	function echart_2() {
 		// 基于准备好的dom，初始化echarts实例
 		var myChart = echarts.init(document.getElementById('chart_2'));
 		myChart.clear();
 		option = {
-			title: {
-				text: ''
-			},
-			tooltip: {
-				trigger: 'axis'
-			},
-			legend: {
-				data: ['销售额', '订单数'],
-				textStyle: {
-					color: '#fff'
-				},
-				top: '8%'
-			},
-			grid: {
-				top: '40%',
-				left: '3%',
-				right: '4%',
-				bottom: '3%',
-				containLabel: true
-			},
-			color: ['#FF4949', '#FFA74D', '#FFEA51', '#4BF0FF', '#44AFF0', '#4E82FF', '#584BFF', '#BE4DFF', '#F845F1'],
 			xAxis: {
+				name: '区域',
 				type: 'category',
-				boundaryGap: false,
-				data: ['2018年9月', '2018年10月', '2018年11月', '2018年12月', '2019年1月'],
-				splitLine: {
-					show: false
-				},
+				data: ['上城区', '下城区', '江干区', '拱墅区', '西湖区', '滨江区', '萧山区', '余杭区', '富阳区', '临安区', '建德区', '桐庐区', '淳安区', '大江东', '开发区',
+					'名胜区'
+				],
 				axisLine: {
 					lineStyle: {
 						color: '#fff'
@@ -142,11 +121,8 @@ $(function() {
 				}
 			},
 			yAxis: {
-				name: '',
+				name: '万人',
 				type: 'value',
-				splitLine: {
-					show: false
-				},
 				axisLine: {
 					lineStyle: {
 						color: '#fff'
@@ -154,16 +130,9 @@ $(function() {
 				}
 			},
 			series: [{
-					name: '销售额',
-					type: 'line',
-					data: [3961.88, 4233.63, 4183.14, 3633.01, 3704.47]
-				},
-				{
-					name: '订单数',
-					type: 'line',
-					data: [3374.76, 3364.76, 3274.76, 3371.82, 3259.87]
-				}
-			]
+				data: [10, 12, 15, 11, 23, 12, 24, 25, 10, 7, 8, 9, 9, 12, 17, 8],
+				type: 'bar'
+			}]
 		};
 		myChart.setOption(option);
 	}
@@ -172,18 +141,18 @@ $(function() {
 	function echart_map() {
 		var myChart = echarts.init(document.getElementById('chart_map'));
 		var geoCoordMap = {
-			"1": [119.2070396626, 26.0471838188],
-			"2": [119.2147498638, 26.0481609598],
-			"3": [119.209339, 26.038355],
-			"4": [119.2163806469, 26.0442086921],
-			"5": [119.2132263691, 26.0498767809],
-			"6": [119.219382299, 26.0524969442],
-			"7": [119.2194920093, 26.0496647145],
-			"8": [119.2194276363, 26.0475440293],
-			"9": [119.225689, 26.044945],
-			"10": [119.215699, 26.045237],
-			"11": [119.2191260061, 26.0366349971],
-			"12": [119.212969, 26.039069]
+			"1": [120.209002,30.261992],
+			"2": [120.227328,30.262991],
+			"3": [120.216908,30.269292],
+			"4": [120.205301,30.256611],
+			"5": [120.217033,30.252216],
+			"6": [120.230544,30.2612],
+			"7": [120.195684,30.242908],
+			"8": [120.19993,30.253464],
+			"9": [120.184608,30.257137],
+			"10": [120.189495,30.257387],
+			"11": [120.196825,30.252271],
+			"12": [120.198272,30.266336]
 		};
 		var oneData = [
 			[{
@@ -399,9 +368,9 @@ $(function() {
 		var option = {
 			bmap: {
 				// 百度地图中心经纬度 坐标拾取器http://api.map.baidu.com/lbsapi/getpoint/index.html
-				center: [119.2166696096, 26.0446365813],
+				center: [120.204452,30.256634],
 				// 百度地图缩放等级，数字越大，放大越大，地图比例尺越小
-				zoom: 16,
+				zoom: 15,
 				// 是否开启拖拽缩放，可以只设置 'scale' 或者 'move'
 				roam: false,
 				// mapStyle是百度地图的自定义样式，见 http://developer.baidu.com/map/custom/
@@ -568,7 +537,7 @@ $(function() {
 		// });
 	}
 
-	//echart_3货物周转量
+	//echart_3报名量
 	function echart_3() {
 		// 基于准备好的dom，初始化echarts实例
 		var myChart = echarts.init(document.getElementById('chart_3'));
@@ -581,7 +550,7 @@ $(function() {
 				trigger: 'axis'
 			},
 			legend: {
-				data: ['顺丰快递', '邮政速递', '百世快递', '圆通速递', '中通速递', '申通快递', '韵达快递'],
+				data: ['志愿者', '论坛', '老年大学', '家政'],
 				textStyle: {
 					color: '#fff'
 				},
@@ -594,11 +563,11 @@ $(function() {
 				bottom: '3%',
 				containLabel: true
 			},
-			color: ['#FF4949', '#FFA74D', '#FFEA51', '#4BF0FF', '#44AFF0', '#4E82FF', '#584BFF', '#BE4DFF', '#F845F1'],
+			color: ['#FF4949', '#FFA74D', '#FFEA51', '#4BF0FF'],
 			xAxis: {
 				type: 'category',
 				boundaryGap: false,
-				data: ['2018年9月', '2018年10月', '2018年11月', '2018年12月', '2019年1月'],
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
 				splitLine: {
 					show: false
 				},
@@ -621,311 +590,33 @@ $(function() {
 				}
 			},
 			series: [{
-					name: '顺丰快递',
+					name: '志愿者',
 					type: 'line',
-					data: [3961, 4233, 4183, 3633, 3704]
+					data: [396, 423, 418, 363, 370,323,521]
 				},
 				{
-					name: '邮政速递',
+					name: '论坛',
 					type: 'line',
-					data: [3374, 3364, 3274, 3371, 3259]
+					data: [737, 636, 527, 737, 225,478,578]
 				},
 				{
-					name: '百世快递',
+					name: '老年大学',
 					type: 'line',
-					data: [14, 15, 13, 14, 15]
+					data: [545, 615, 413, 314, 515,714,628]
 				},
 				{
-					name: '圆通速递',
+					name: '家政',
 					type: 'line',
-					data: [686, 847, 895, 865, 886]
-				},
-				{
-					name: '中通速递',
-					type: 'line',
-					data: [6133, 6577, 7019, 6821, 7294]
-				},
-				{
-					name: '申通快递',
-					type: 'line',
-					data: [509, 862, 1481, 1552, 1333]
-				},
-				{
-					name: '韵达快递',
-					type: 'line',
-					data: [509, 900, 1350, 1487, 1600]
+					data: [686, 847, 895, 865, 886,992,437]
 				}
 			]
 		};
 		myChart.setOption(option);
 	}
 
-	//湖南省飞机场
-	function echart_5() {
-		// 基于准备好的dom，初始化echarts实例
-		var myChart = echarts.init(document.getElementById('chart_5'));
-
-		function showProvince() {
-			var geoCoordMap = {
-				'长沙黄花国际机场': [113.226512, 28.192929],
-				'张家界荷花机场': [110.454598, 29.107223],
-				'常德桃花源机场': [111.651508, 28.921516],
-				'永州零陵机场': [111.622869, 26.340994],
-				'怀化芷江机场': [109.714784, 27.44615],
-			};
-			var data = [{
-					name: '长沙黄花国际机场',
-					value: 100
-				},
-				{
-					name: '张家界荷花机场',
-					value: 100
-				},
-				{
-					name: '常德桃花源机场',
-					value: 100
-				},
-				{
-					name: '永州零陵机场',
-					value: 100
-				},
-				{
-					name: '怀化芷江机场',
-					value: 100
-				}
-			];
-			var max = 480,
-				min = 9; // todo 
-			var maxSize4Pin = 100,
-				minSize4Pin = 20;
-			var convertData = function(data) {
-				var res = [];
-				for (var i = 0; i < data.length; i++) {
-					var geoCoord = geoCoordMap[data[i].name];
-					if (geoCoord) {
-						res.push({
-							name: data[i].name,
-							value: geoCoord.concat(data[i].value)
-						});
-					}
-				}
-				return res;
-			};
-
-			myChart.setOption(option = {
-				title: {
-					top: 20,
-					text: '',
-					subtext: '',
-					x: 'center',
-					textStyle: {
-						color: '#ccc'
-					}
-				},
-				legend: {
-					orient: 'vertical',
-					y: 'bottom',
-					x: 'right',
-					data: ['pm2.5'],
-					textStyle: {
-						color: '#fff'
-					}
-				},
-				visualMap: {
-					show: false,
-					min: 0,
-					max: 500,
-					left: 'left',
-					top: 'bottom',
-					text: ['高', '低'], // 文本，默认为数值文本
-					calculable: true,
-					seriesIndex: [1],
-					inRange: {}
-				},
-				geo: {
-					show: true,
-					map: 'hunan',
-					mapType: 'hunan',
-					label: {
-						normal: {},
-						//鼠标移入后查看效果
-						emphasis: {
-							textStyle: {
-								color: '#fff'
-							}
-						}
-					},
-					//鼠标缩放和平移
-					roam: true,
-					itemStyle: {
-						normal: {
-							//          	color: '#ddd',
-							borderColor: 'rgba(147, 235, 248, 1)',
-							borderWidth: 1,
-							areaColor: {
-								type: 'radial',
-								x: 0.5,
-								y: 0.5,
-								r: 0.8,
-								colorStops: [{
-									offset: 0,
-									color: 'rgba(175,238,238, 0)' // 0% 处的颜色
-								}, {
-									offset: 1,
-									color: 'rgba(	47,79,79, .2)' // 100% 处的颜色
-								}],
-								globalCoord: false // 缺省为 false
-							},
-							shadowColor: 'rgba(128, 217, 248, 1)',
-							shadowOffsetX: -2,
-							shadowOffsetY: 2,
-							shadowBlur: 10
-						},
-						emphasis: {
-							areaColor: '#389BB7',
-							borderWidth: 0
-						}
-					}
-				},
-				series: [{
-						name: 'light',
-						type: 'map',
-						coordinateSystem: 'geo',
-						data: convertData(data),
-						itemStyle: {
-							normal: {
-								color: '#F4E925'
-							}
-						}
-					},
-					{
-						name: '点',
-						type: 'scatter',
-						coordinateSystem: 'geo',
-						symbol: 'pin',
-						symbolSize: function(val) {
-							var a = (maxSize4Pin - minSize4Pin) / (max - min);
-							var b = minSize4Pin - a * min;
-							b = maxSize4Pin - a * max;
-							return a * val[2] + b;
-						},
-						label: {
-							normal: {
-								// show: true,
-								// textStyle: {
-								//     color: '#fff',
-								//     fontSize: 9,
-								// }
-							}
-						},
-						itemStyle: {
-							normal: {
-								color: '#F62157', //标志颜色
-							}
-						},
-						zlevel: 6,
-						data: convertData(data),
-					},
-					{
-						name: 'light',
-						type: 'map',
-						mapType: 'hunan',
-						geoIndex: 0,
-						aspectScale: 0.75, //长宽比
-						showLegendSymbol: false, // 存在legend时显示
-						label: {
-							normal: {
-								show: false
-							},
-							emphasis: {
-								show: false,
-								textStyle: {
-									color: '#fff'
-								}
-							}
-						},
-						roam: true,
-						itemStyle: {
-							normal: {
-								areaColor: '#031525',
-								borderColor: '#FFFFFF',
-							},
-							emphasis: {
-								areaColor: '#2B91B7'
-							}
-						},
-						animation: false,
-						data: data
-					},
-					{
-						name: ' ',
-						type: 'effectScatter',
-						coordinateSystem: 'geo',
-						data: convertData(data.sort(function(a, b) {
-							return b.value - a.value;
-						}).slice(0, 5)),
-						symbolSize: function(val) {
-							return val[2] / 10;
-						},
-						showEffectOn: 'render',
-						rippleEffect: {
-							brushType: 'stroke'
-						},
-						hoverAnimation: true,
-						label: {
-							normal: {
-								formatter: '{b}',
-								position: 'right',
-								show: true
-							}
-						},
-						itemStyle: {
-							normal: {
-								color: '#05C3F9',
-								shadowBlur: 10,
-								shadowColor: '#05C3F9'
-							}
-						},
-						zlevel: 1
-					},
-
-				]
-			});
-		}
-		showProvince();
-
-		// 使用刚指定的配置项和数据显示图表。
-		// myChart.setOption(option);
-		window.addEventListener("resize", function() {
-			myChart.resize();
-		});
+	//chart_4一些数字
+	function echart_4() {
+		
 	}
-	//点击跳转
-	// $('#chart_map').click(function(){
-	//     window.location.href = './page/index.html';
-	// });
-	// $('.t_btn2').click(function(){
-	//     window.location.href = "./page/index.html?id=2";
-	// });
-	// $('.t_btn3').click(function(){
-	//     window.location.href = "./page/index.html?id=3";
-	// });
-	// $('.t_btn4').click(function(){
-	//     window.location.href = "./page/index.html?id=4";
-	// });
-	// $('.t_btn5').click(function(){
-	//     window.location.href = "./page/index.html?id=5";
-	// });
-	// $('.t_btn6').click(function(){
-	//     window.location.href = "./page/index.html?id=6";
-	// });
-	// $('.t_btn7').click(function(){
-	//     window.location.href = "./page/index.html?id=7";
-	// });
-	// $('.t_btn8').click(function(){
-	//     window.location.href = "./page/index.html?id=8";
-	// });
-	// $('.t_btn9').click(function(){
-	//     window.location.href = "./page/index.html?id=9";
-	// });
+
 });
