@@ -7,7 +7,7 @@
 		<title>杭州市养老驾驶舱</title>
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" href="css/index2.css">
+		<link rel="stylesheet" href="css/chart.css">
 	</head>
 	<body>
 
@@ -19,12 +19,8 @@
 				</div>
 			</div>
 		</div>
-
 		<!--main-->
 		<div class="data_content">
-			<!-- <div class="data_time">
-        温馨提示: 点击模块后跳转至详情页面。        
-    </div> -->
 
 			<div class="data_main">
 				<div class="main_left fl">
@@ -53,7 +49,7 @@
 							<img src="picture/t_1.png" alt="">
 							年龄分布
 						</div>
-						<div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+						<div id="chart_1" class="chart_left1"></div>
 					</div>
 					<div class="left_2" style="cursor: pointer;">
 						<div class="t_line_box">
@@ -76,7 +72,7 @@
 							<img src="picture/t_2.png" alt="">
 							地域分布
 						</div>
-						<div id="chart_2" class="chart t_btn9" style="width:100%;height: 280px;"></div>
+						<div id="chart_2" class="chart_left2"></div>
 					</div>
 				</div>
 				<div class="main_center fl">
@@ -103,9 +99,9 @@
 						</div>
 						<div class="main_title" style="width: 230px;">
 							<img src="picture/t_3.png" alt="">
-							市区服务情况
+							紧急救援流向图
 						</div>
-						<div id="chart_map" style="width:100%;height:610px;">
+						<div id="chart_map" class="center_chart">
 						</div>
 						<div class="linshi_zdy">
 							<ul>
@@ -116,62 +112,6 @@
 						</div>
 					</div>
 				</div>
-				<style type="text/css">
-					.linshi_zdy {
-						position: absolute;
-						right: 0px;
-						top: 450px;
-					}
-
-					.linshi_zdy li {
-						width: 150px;
-						font-size: 16px;
-						padding: 3px 8px;
-						cursor: pointer;
-					}
-
-					.linshi_zdy span {
-						display: block;
-						width: 14px;
-						height: 14px;
-						float: left;
-						border-radius: 50%;
-						margin-top: 3px;
-						margin-right: 5px;
-					}
-
-					.linshi_zdy li:first-child {
-						color: #4BF0FF;
-					}
-
-					.linshi_zdy li:first-child span {
-						background: #4BF0FF;
-					}
-
-					.linshi_zdy li:nth-child(2) {
-						color: #FFA74D;
-					}
-
-					.linshi_zdy li:nth-child(2) span {
-						background: #FFA74D;
-					}
-
-					.linshi_zdy li:nth-child(3) {
-						color: #a6c84c;
-					}
-
-					.linshi_zdy li:nth-child(3) span {
-						background: #a6c84c;
-					}
-
-					.linshi_zdy li:nth-child(4) {
-						color: #f4a100;
-					}
-
-					.linshi_zdy li:nth-child(4) span {
-						background: #f4a100;
-					}
-				</style>
 				<div class="main_right fr">
 					<div class="right_1">
 						<!--左上边框-->
@@ -194,11 +134,11 @@
 							<i class="r_b_line"></i>
 							<i class="b_r_line"></i>
 						</div>
-						<div class="main_title" style="width:220px;">
+						<div class="main_title">
 							<img src="picture/t_4.png" alt="">
-							老年活动报名量
+							活动报名量
 						</div>
-						<div id="chart_3" class="echart t_btn7" style="width:100%;height: 280px;"></div>
+						<div id="chart_3" class="chart_right1"></div>
 					</div>
 					<div class="right_2">
 						<!--左上边框-->
@@ -221,17 +161,15 @@
 							<i class="r_b_line"></i>
 							<i class="b_r_line"></i>
 						</div>
-						<div class="main_title" style="width:200px;">
+						<div class="main_title">
 							<img src="picture/t_5.png" alt="">
 							其他服务数据
 						</div>
-						<div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 280px;cursor: pointer;">
-
-							<p class="text_data" style="margin-top: 30px;">服务覆盖全市老年人群：82%</p>
+						<div id="chart_4" class="chart_right2">
+							<p class="text_data" style="margin-top: 45px;">服务覆盖全市老年人群：82%</p>
 							<div class="text_data">亲情关爱数：137842</div>
 							<div class="text_data">家政预约量：355278</div>
 							<div class="text_data">金融成交量：578249</div>
-							<div class="text_data">当月补给金额：578249</div>
 						</div>
 					</div>
 				</div>
@@ -256,43 +194,55 @@
 					</div>
 					<div class="main_title">
 						<img src="picture/t_7.png" alt="">
-						年龄分布
+						紧急救援信息
 					</div>
 					<div class="main_table t_btn8">
 						<table>
 							<thead>
 								<tr>
-									<th>年龄</th>
-									<th>人数</th>
-									<th>占比</th>
+									<th>姓名</th>
+									<th>地区</th>
+									<th>告警时间</th>
+									<th>救援时间</th>
+									<th>处理状态</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>60-69</td>
-									<td>1172324</td>
-									<td>52.64%</td>
+									<td>张秀林</td>
+									<td>上城区</td>
+									<td>2020/7/29 11:06</td>
+									<td>2020/7/29 11:16</td>
+									<td>进行中</td>
 								</tr>
 								<tr>
-									<td>70-79</td>
-									<td>739348</td>
-									<td>33.20%</td>
+									<td>陈南</td>
+									<td>江干区</td>
+									<td>2020/7/29 10:52</td>
+									<td>2020/7/29 11:02</td>
+									<td>已完成</td>
 								</tr>
 								<tr>
-									<td>70-79</td>
-									<td>739348</td>
-									<td>33.20%</td>
+									<td>赵富贵</td>
+									<td>滨江区</td>
+									<td>2020/7/29 10:38</td>
+									<td>2020/7/29 10:48</td>
+									<td>已完成</td>
+								</tr>
+<!-- 								<tr>
+									<td>李玲玲</td>
+									<td>余杭区</td>
+									<td>2020/7/29 10:16</td>
+									<td>2020/7/29 10:26</td>
+									<td>已完成</td>
 								</tr>
 								<tr>
-									<td>70-79</td>
-									<td>739348</td>
-									<td>33.20%</td>
-								</tr>
-								<tr>
-									<td>70-79</td>
-									<td>739348</td>
-									<td>33.20%</td>
-								</tr>
+									<td>王成功</td>
+									<td>西湖区</td>
+									<td>2020/7/29 10:16</td>
+									<td>2020/7/29 10:26</td>
+									<td>已完成</td>
+								</tr> -->
 							</tbody>
 						</table>
 					</div>
@@ -315,141 +265,51 @@
 							<i class="r_b_line"></i>
 							<i class="b_r_line"></i>
 						</div>
-						<div class="main_title" style="width:300px;left:40%;">
+						<div class="main_title">
 							<img src="picture/t_7.png" alt="">
-							区域分布
+							异常预警
 						</div>
 						<div class="main_table t_btn8">
 							<table>
 								<thead>
 									<tr>
-										<th>区、县(市)</th>
-										<th>60岁及以上老年人口数</th>
+										<th>异常情况</th>
+										<th>报警数</th>
+										<th>异常情况</th>
+										<th>报警数</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>总计</td>
-										<td>1671824</td>
+										<td>主动求助</td>
+										<td>20</td>
+										<td>连续三日心率异常</td>
+										<td>27</td>
 									</tr>
 									<tr>
-										<td>上城区</td>
-										<td>98008</td>
+										<td>连续三日血压异常</td>
+										<td>52</td>
+										<td>连续三日血脂异常</td>
+										<td>45</td>
 									</tr>
 									<tr>
-										<td>下城区</td>
-										<td>106833</td>
+										<td>连续三日血糖异常</td>
+										<td>33</td>
+										<td>连续三日体温异常</td>
+										<td>25</td>
+									</tr>
+<!-- 									<tr>
+										<td>连续三日走路速度异常</td>
+										<td>39</td>
+										<td>连续三分钟呼吸频率异常</td>
+										<td>8</td>
 									</tr>
 									<tr>
-										<td>江干区</td>
-										<td>97545</td>
-									</tr>
-									<tr>
-										<td>拱墅区</td>
-										<td>89386</td>
-									</tr>
-									<tr>
-										<td>西湖区</td>
-										<td>121896</td>
-									</tr>
-									<tr>
-										<td>滨江区</td>
-										<td>32700</td>
-									</tr>
-									<tr>
-										<td>萧山区</td>
-										<td>273838</td>
-									</tr>
-									<tr>
-										<td>余杭区</td>
-										<td>214143</td>
-									</tr>
-									<tr>
-										<td>富阳区</td>
-										<td>145458</td>
-									</tr>
-									<tr>
-										<td>临安区</td>
-										<td>145458</td>
-									</tr>
-									<tr>
-										<td>建德市</td>
-										<td>118910</td>
-									</tr>
-									<tr>
-										<td>桐庐县</td>
-										<td>97112</td>
-									</tr>
-									<tr>
-										<td>淳安县</td>
-										<td>99557</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="bottom_3 fl">
-						<div class="t_line_box">
-							<i class="t_l_line"></i>
-							<i class="l_t_line"></i>
-						</div>
-						<div class="t_line_box">
-							<i class="t_r_line"></i>
-							<i class="r_t_line"></i>
-						</div>
-						<div class="t_line_box">
-							<i class="l_b_line"></i>
-							<i class="b_l_line"></i>
-						</div>
-						<div class="t_line_box">
-							<i class="r_b_line"></i>
-							<i class="b_r_line"></i>
-						</div>
-						<div class="main_title" style="width:260px;left:45%;">
-							<img src="picture/t_7.png" alt="">
-							救援信息
-						</div>
-						<div class="main_table t_btn2">
-							<table>
-								<thead>
-									<tr>
-										<th>姓名</th>
-										<th>地区</th>
-										<th>救援时间</th>
-										<th>处理状态</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>张秀林</td>
-										<td>上城区</td>
-										<td>2020/7/29 11:16</td>
-										<td>进行中</td>
-									</tr>
-									<tr>
-										<td>陈南</td>
-										<td>江干区</td>
-										<td>2020/7/29 11:02</td>
-										<td>已完成</td>
-									</tr>
-									<tr>
-										<td>赵富贵</td>
-										<td>滨江区</td>
-										<td>2020/7/29 10:48</td>
-										<td>已完成</td>
-									</tr>
-									<tr>
-										<td>李健康</td>
-										<td>余杭区</td>
-										<td>2020/7/29 10:26</td>
-										<td>已完成</td>
-									</tr>
-									<tr>
-										<td>王成功</td>
-										<td>西湖区</td>
-										<td>2020/7/30 11:27</td>
-										<td>已完成</td>
-									</tr>
+										<td>连续半小时外部烟雾异常</td>
+										<td>5</td>
+										<td>连续半小时外部其他异常</td>
+										<td>3</td>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>
@@ -474,43 +334,55 @@
 					</div>
 					<div class="main_title">
 						<img src="picture/t_7.png" alt="">
-						报名信息
+						回访记录
 					</div>
 					<div class="main_table t_btn3 table_zdy">
 						<table>
 							<thead>
 								<tr>
-									<th>月份</th>
-									<th>志愿者</th>
-									<th>论坛</th>
+									<th>姓名</th>
+									<th>地区</th>
+									<th>预警时间</th>
+									<th>预警类型</th>
+									<th>处理状态</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1月</td>
-									<td>500</td>
-									<td>30</td>
+									<td>刘晓兰</td>
+									<td>上城区</td>
+									<td>2020/7/29 10:26</td>
+									<td>心率异常</td>
+									<td>已回访</td>
 								</tr>
 								<tr>
-									<td>2月</td>
-									<td>200</td>
-									<td>30</td>
+									<td>管夏云</td>
+									<td>滨江区</td>
+									<td>2020/7/29 11:02</td>
+									<td>血压异常</td>
+									<td>已回访</td>
 								</tr>
 								<tr>
-									<td>3月</td>
-									<td>300</td>
-									<td>40</td>
+									<td>张秀林</td>
+									<td>江干区</td>
+									<td>2020/7/29 10:48</td>
+									<td>血糖异常</td>
+									<td>已回访</td>
+								</tr>
+<!-- 								<tr>
+									<td>赵健康</td>
+									<td>下城区</td>
+									<td>2020/7/29 10:26</td>
+									<td>血脂异常</td>
+									<td>已回访</td>
 								</tr>
 								<tr>
-									<td>4月</td>
-									<td>600</td>
-									<td>60</td>
-								</tr>
-								<tr>
-									<td>5月</td>
-									<td>1200</td>
-									<td>120</td>
-								</tr>
+									<td>王亚南</td>
+									<td>拱墅区</td>
+									<td>2020/7/29 9:27</td>
+									<td>体温异常</td>
+									<td>已回访</td>
+								</tr> -->
 							</tbody>
 						</table>
 					</div>

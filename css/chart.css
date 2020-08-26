@@ -1,0 +1,90 @@
+/*中间大区样式*/
+.center_chart {
+	width: 100%;
+	height: 380px;
+	cursor: pointer;
+}
+
+.anchorBL{
+    display:none;
+}
+
+.linshi_zdy {
+	position: absolute;
+	right: -30px;
+	top: 290px;
+}
+
+.linshi_zdy li {
+	width: 150px;
+	font-size: 12px;
+	padding: 3px 8px;
+	cursor: pointer;
+}
+
+.linshi_zdy span {
+	display: block;
+	width: 14px;
+	height: 14px;
+	float: left;
+	border-radius: 50%;
+	margin-top: 3px;
+	margin-right: 5px;
+}
+
+.linshi_zdy li:first-child {
+	color: #4BF0FF;
+}
+
+.linshi_zdy li:first-child span {
+	background: #4BF0FF;
+}
+
+.linshi_zdy li:nth-child(2) {
+	color: #FFA74D;
+}
+
+.linshi_zdy li:nth-child(2) span {
+	background: #FFA74D;
+}
+
+.linshi_zdy li:nth-child(3) {
+	color: #a6c84c;
+}
+
+.linshi_zdy li:nth-child(3) span {
+	background: #a6c84c;
+}
+
+.linshi_zdy li:nth-child(4) {
+	color: #f4a100;
+}
+
+.linshi_zdy li:nth-child(4) span {
+	background: #f4a100;
+}
+
+/*左上图表样式*/
+.chart_left1 {
+	width: 100%;
+	height: 180px;
+}
+
+/*左下图表样式*/
+.chart_left2 {
+	width: 100%;
+	height: 180px;
+}
+
+/*右上图表样式*/
+.chart_right1 {
+	width: 100%;
+	height: 180px;
+}
+
+/*右下图表样式*/
+.chart_right2 {
+	width: 100%;
+	height: 180px;
+	font-size: 10px;
+}
